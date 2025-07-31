@@ -18,4 +18,4 @@ $(TARGET): $(OBJS)
 
 .PHONY: clean
 clean:
-	del /Q $(OBJS) $(TARGET) $(DEPS)
+	rm -f $(OBJS) $(TARGET) $(DEPS)
