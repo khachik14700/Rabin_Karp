@@ -2,6 +2,8 @@
 #include <iostream>     
 #include <string>       
 #include <vector>       
+#include <cctype>
+#include <algorithm>
 
 Application::Application(const std::string& filename, int pVal, int mVal): fr(filename), rks(pVal,mVal) {}
 
@@ -19,6 +21,11 @@ void Application::run()
 
     std::cout << "Enter the pattern to search for: ";
     std::cin >> userPattern;
+
+    std::transform(fileText.begin(), fileText.end(), fileText.begin(),
+               [](unsigned char c){ return std::tolower(c); });
+    std::transform(userPattern.begin(), userPattern.end(), userPattern.begin(),
+               [](unsigned char c){ return std::tolower(c); });
 
     std::vector<int> results = rks.search(fileText, userPattern);
 
