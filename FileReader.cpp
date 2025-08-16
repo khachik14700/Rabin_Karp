@@ -3,12 +3,14 @@
 #include <iostream>    
 #include <iterator>
 
-std::string FileReader::readTextFromFile(const std::string& filename)
+FileReader::FileReader(const std::string& filename): filename_(filename) {}
+
+std::string FileReader::getFileContent()
 {
-    std::ifstream inputFile(filename);
+    std::ifstream inputFile(filename_);
     if (!inputFile.is_open())
     {
-        std::cerr << "Error: Could not open file '" << filename << "'" << std::endl;
+        std::cerr << "Error: Could not open file '" << filename_ << "'" << std::endl;
         return "";
     }
     std::string fileContent((std::istreambuf_iterator<char>(inputFile)), std::istreambuf_iterator<char>());

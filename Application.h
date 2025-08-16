@@ -9,8 +9,14 @@
 
 class Application
 {
+private:
+    FileReader fr;
+    RabinKarpSearcher rks;
+
 public:
-    void run(int pVal, int mVal);
+    Application(const std::string& filename, int pVal, int mVal);
+
+    void run();
 };
 
 #endif

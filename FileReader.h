@@ -5,8 +5,13 @@
 
 class FileReader
 {
+private:
+    std::string filename_;
+
 public:
-    static std::string readTextFromFile(const std::string& filename);
+    FileReader(const std::string& filename);
+
+    std::string getFileContent();
 };
 
 #endif

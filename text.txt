@@ -1,0 +1,21 @@
+Preface to the Fifth Edition
+Learning C++ is an adventure of discovery, particularly because the language accommodates
+several programming paradigms, including object-oriented programming, generic programming, and the traditional procedural programming. C++ was a moving target as the language
+added new features, but now, with the ISO/ANSI C++ Standard, Second Edition (2003), in
+place, the language has stabilized. Contemporary compilers support most or all of the features
+mandated by the standard, and programmers have had time to get used to applying these features. The fifth edition of this book, C++ Primer Plus, reflects the ISO/ANSI standard and
+describes this matured version of C++.
+C++ Primer Plus discusses the basic C language and presents C++ features, making this book
+self-contained. It presents C++ fundamentals and illustrates them with short, to-the-point programs that are easy to copy and experiment with. You’ll learn about input/output (I/O), how to
+make programs perform repetitive tasks and make choices, the many ways to handle data, and
+how to use functions. You’ll learn about the many features C++ has added to C, including the
+following:
+Classes and objects
+Inheritance
+Polymorphism, virtual functions, and runtime type identification (RTTI)
+Function overloading
+Reference variables
+Generic, or type-independent, programming, as provided by templates and the Standard
+Template Library (STL)
+The exception mechanism for handling error conditions
+Namespaces for managing names of functions, classes, and variables

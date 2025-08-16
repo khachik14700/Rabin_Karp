@@ -3,17 +3,14 @@
 #include <string>       
 #include <vector>       
 
+Application::Application(const std::string& filename, int pVal, int mVal): fr(filename), rks(pVal,mVal) {}
 
-void Application::run(int pVal, int mVal)
+void Application::run()
 {
-    std::string filename;
     std::string userPattern;
     std::string fileText;
 
-    std::cout << "Enter the filename to search in: ";
-    std::cin >> filename;
-
-    fileText = FileReader::readTextFromFile(filename);
+    fileText = fr.getFileContent();
     if (fileText.empty())
     {
         std::cout << "Exiting due to file read error." << std::endl;
@@ -23,9 +20,7 @@ void Application::run(int pVal, int mVal)
     std::cout << "Enter the pattern to search for: ";
     std::cin >> userPattern;
 
-    RabinKarpSearcher searcher(pVal, mVal);
-
-    std::vector<int> results = searcher.search(fileText, userPattern);
+    std::vector<int> results = rks.search(fileText, userPattern);
 
     std::cout << "\n Final Results " << std::endl;
     if (results.empty())
